@@ -191,7 +191,6 @@ Tensor Tensor::unsqueeze(size_t dim) const {
 }
 
 //Concatenacion
-
 Tensor Tensor::concat(const vector<Tensor>& tensors, size_t dim) {
   if (tensors.empty()) throw std::invalid_argument("Lista vacía");
   vector<size_t> shapebase = tensors[0].shape;
@@ -223,7 +222,6 @@ Tensor Tensor::concat(const vector<Tensor>& tensors, size_t dim) {
 }
 
 //Funciones amigas
-
 Tensor dot(const Tensor& a, const Tensor& b) {
   vector<size_t> shapeA = a.getShape();
   vector<size_t> shapeB = b.getShape();

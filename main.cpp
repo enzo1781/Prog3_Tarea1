@@ -18,6 +18,8 @@ class Tensor {
   vector<size_t> shape;
   double* values;
 public:
+  Tensor view(const vector<size_t>& newshape) const;
+  Tensor unsqueeze(size_t dim) const;
   //constructor
   Tensor(const vector<size_t>& s, const vector<double>& v) {
     shape = s;
